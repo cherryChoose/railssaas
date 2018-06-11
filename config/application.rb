@@ -25,6 +25,6 @@ module Store
     
     config.action_dispatch.rescue_responses["ProductsController::Forbidden"] = :Forbidden
 
-    config.exceptions_app = self.routes
+    # config.exceptions_app = self.routes
   end
 end

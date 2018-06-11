@@ -13,5 +13,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  get '(errors)/:status', to: "errors#show", constraints: {status: /\d{3}/}
+  resources :projects
+  resources :tasks
+
+  # get '(errors)/:status', to: "errors#show", constraints: {status: /\d{3}/}
 end

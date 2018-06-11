@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  rescue_from "Exception", with: :forbidden
+  #rescue_from "Exception", with: :forbidden
 
 private
 
@@ -14,7 +14,7 @@ private
     redirect_to login_url, alert: "Not authorized" if current_user.nil?
   end
 
-  def forbidden(exception)
-    render text: exception.message
-  end	
+  # def forbidden(exception)
+  #   render text: exception.message
+  # end	
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180608065603) do
+ActiveRecord::Schema.define(version: 20180611150520) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -30,15 +30,8 @@ ActiveRecord::Schema.define(version: 20180608065603) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer  "article_id"
-    t.string   "name"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+# Could not dump table "comments" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -57,6 +50,22 @@ ActiveRecord::Schema.define(version: 20180608065603) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.datetime "completed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tasks", ["project_id"], name: "index_tasks_on_project_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
