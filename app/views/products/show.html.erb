@@ -1,14 +1,20 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @product.name %></h1>
 
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <b>Price:</b>
+  <%= number_to_currency @product.price %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
+  <b>Release Date:</b>
+  <%= @product.released_on.try(:strftime, "%B %e, %Y") %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category.name %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Destroy', @product, method: :delete, confirm: "Are you sure?" %> |
+<%= link_to 'List Products', products_path %>
