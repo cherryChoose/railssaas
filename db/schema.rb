@@ -57,6 +57,14 @@ ActiveRecord::Schema.define(version: 20180611150520) do
     t.datetime "updated_at"
   end
 
+  create_table "snippets", force: :cascade do |t|
+    t.string   "language"
+    t.string   "plain_code"
+    t.string   "highlighted_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "name"

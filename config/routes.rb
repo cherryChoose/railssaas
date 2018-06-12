@@ -1,3 +1,4 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
   root to: 'users#index'
 
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
 
   resources :projects
   resources :tasks
-
+  mount Sidekiq::Web, at:'/sidekiq'
   # get '(errors)/:status', to: "errors#show", constraints: {status: /\d{3}/}
 end

@@ -28,7 +28,10 @@ gem 'zurb-foundation'
 # 基于rack的web应用的性能调优
 gem 'rack-mini-profiler'
 gem 'url_format', path: '~/project/url_format'
+# backend job
+gem 'sidekiq'
 # Use Unicorn as the app server
+
 # gem 'unicorn'
 
 # Use Capistrano for deployment

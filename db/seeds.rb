@@ -5,8 +5,8 @@ batman = bruce.articles.create! name: "Batman", published_at: 2.days.ago, conten
 Batman is a fictional character created by the artist Bob Kane and writer Bill Finger. A comic book superhero, Batman first appeared in Detective Comics #27 (May 1939), and since then has appeared primarily in publications by DC Comics. Originally referred to as "The Bat-Man" and still referred to at times as "The Batman", he is additionally known as "The Caped Crusader", "The Dark Knight", and the "World's Greatest Detective," among other titles. (from Wikipedia)
 ARTICLE
 
-batman.comments.create! name: "Alfred", content: "What attire would you prefer this evening, Sir?"
-batman.comments.create! name: "Bruce Wayne", content: "I'm Batman."
+batman.comments.create! name: "Alfred", website: 'http://www.example.com', content: "What attire would you prefer this evening, Sir?"
+batman.comments.create! name: "Bruce Wayne", website: 'http://www.example.com', content: "I'm Batman."
 
 superman = clark.articles.create! name: "Superman", published_at: 5.days.ago, content: <<-ARTICLE
 Superman is a fictional comic book superhero appearing in publications by DC Comics, widely considered to be an American cultural icon. Created by American writer Jerry Siegel and Canadian-born American artist Joe Shuster in 1932 while both were living in Cleveland, Ohio, and sold to Detective Comics, Inc. (later DC Comics) in 1938, the character first appeared in Action Comics #1 (June 1938) and subsequently appeared in various radio serials, television programs, films, newspaper strips, and video games. (from Wikipedia)
