@@ -1,28 +1,21 @@
 == README
+# 基于rack的web应用的性能调优
+rack-mini-profiler 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# lock_version  如果异常抛出： ActiveRecord::StaleObjectError 
 
-Things you may want to cover:
+better_erros and panel rails (google engine)
 
-* Ruby version
+throw errors  rescue_from
 
-* System dependencies
+form object
 
-* Configuration
+rails cache
 
-* Database creation
+# 典型的用法在many-to-one时，当many端发生改变时，更新one端的updated_at时间。
+belongs_to :article, touch: true
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bcrypt # Use ActiveModel has_secure_password
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+STI (single table inheritance)
